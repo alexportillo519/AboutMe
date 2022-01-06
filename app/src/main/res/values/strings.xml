@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Vel eros donec ac odio tempor. Ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Pellentesque elit eget gravida cum sociis. Sit amet est placerat in egestas erat imperdiet. Magna eget est lorem ipsum dolor. Eget lorem dolor sed viverra ipsum nunc aliquet. Semper viverra nam libero justo laoreet sit amet cursus. \n\n
+
+Orci a scelerisque purus semper eget duis. Iaculis eu non diam phasellus vestibulum lorem sed risus. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Libero justo laoreet sit amet cursus sit amet dictum. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Enim ut sem viverra aliquet eget sit amet tellus. Eget sit amet tellus cras adipiscing enim eu. Purus non enim praesent elementum. Adipiscing tristique risus nec feugiat in fermentum posuere. Metus dictum at tempor commodo. Tristique et egestas quis ipsum suspendisse ultrices.</string>
+
+    <string name="add_text">Add</string>
+    <string name="cancel_text">Cancel</string>
+</resources>
