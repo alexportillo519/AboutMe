@@ -30,6 +30,8 @@ class HobbiesFragment : Fragment(R.layout.fragment_hobbies) {
         binding.addFab.setOnClickListener {
             val newFragment = HobbyDialogFragment()
             newFragment.show(childFragmentManager, "hobby")
+            // lets the recyclerView know you have new data
+            binding.recyclerView.adapter?.notifyDataSetChanged()
         }
 
         return binding.root
