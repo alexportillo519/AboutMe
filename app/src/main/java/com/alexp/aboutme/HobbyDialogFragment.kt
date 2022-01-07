@@ -27,14 +27,18 @@ class HobbyDialogFragment : DialogFragment() {
             // this gets the layout inflater
             val inflater = requireActivity().layoutInflater;
 
-            builder.setView(inflater.inflate(R.layout.hobby_layout, null))
-                    .setPositiveButton(R.string.add_text,
-                            DialogInterface.OnClickListener { _, _ ->
-                                val newHobby = binding.titleUserInput.text.toString()
-                                HobbyRepository.addHobby(Hobby(newHobby))
-                                Toast.makeText(context, "New hobby: ${binding.titleUserInput.text.toString()}", Toast.LENGTH_SHORT).show()
-                            })
-                    .setNegativeButton(R.string.cancel_text,
+            builder.setView(binding.root)
+                    .setPositiveButton(R.string.add_text
+                    ) { _, _ ->
+                        val newHobby = binding.titleUserInput.text.toString()
+                        HobbyRepository.addHobby(Hobby(newHobby))
+                        Toast.makeText(
+                            context,
+                            "New hobby: $newHobby",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                .setNegativeButton(R.string.cancel_text,
                             DialogInterface.OnClickListener { _, _ ->
                                 dialog?.dismiss()
                                 Toast.makeText(context, "CANCEL", Toast.LENGTH_SHORT).show()

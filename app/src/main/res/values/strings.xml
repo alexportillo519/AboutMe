@@ -6,4 +6,6 @@ Orci a scelerisque purus semper eget duis. Iaculis eu non diam phasellus vestibu
 
     <string name="add_text">Add</string>
     <string name="cancel_text">Cancel</string>
+    <string name="hobby">HOBBY</string>
+    <string name="enter_new_hobby">Enter new hobby...</string>
 </resources>
