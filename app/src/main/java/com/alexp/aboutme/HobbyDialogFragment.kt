@@ -19,13 +19,8 @@ class HobbyDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val binding = HobbyLayoutBinding.inflate(layoutInflater)
-
         return activity?.let {
             val builder = AlertDialog.Builder(it)
-
-
-            // this gets the layout inflater
-            val inflater = requireActivity().layoutInflater;
 
             builder.setView(binding.root)
                     .setPositiveButton(R.string.add_text,
