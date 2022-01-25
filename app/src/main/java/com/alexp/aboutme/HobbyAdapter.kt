@@ -8,7 +8,7 @@ import com.alexp.aboutme.databinding.HobbyListBinding
 import com.alexp.aboutme.models.Hobby
 
 class HobbyAdapter(
-        private val hobbiesList: MutableList<Hobby>
+        private var hobbiesList: MutableList<Hobby>
 ) : RecyclerView.Adapter<HobbyAdapter.HobbyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HobbyViewHolder {
@@ -21,7 +21,7 @@ class HobbyAdapter(
         holder.onBind(hobbiesList[position])
     }
 
-    override fun getItemCount() = hobbiesList.size
+    override fun getItemCount(): Int = hobbiesList.size
 
     class HobbyViewHolder(
             private val binding: HobbyListBinding
@@ -31,4 +31,10 @@ class HobbyAdapter(
             hobbyText.text = hobby.hobbies
         }
     }
+
+    fun addHobby(hobby: Hobby) {
+        hobbiesList.add(hobby)
+        notifyItemInserted(hobbiesList.size)
+    }
+
 }

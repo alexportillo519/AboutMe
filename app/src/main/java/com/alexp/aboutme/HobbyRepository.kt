@@ -16,4 +16,8 @@ object HobbyRepository {
     fun getHobbies() : MutableList<Hobby> {
         return hobbies.toMutableList()
     }
+
+    fun hobbySize(): Int {
+        return hobbies.size
+    }
 }

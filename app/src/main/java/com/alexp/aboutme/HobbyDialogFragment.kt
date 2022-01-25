@@ -17,6 +17,8 @@ import java.lang.IllegalStateException
 
 class HobbyDialogFragment : DialogFragment() {
 
+    var onHobbyAdded: () -> Unit = {}
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val binding = HobbyLayoutBinding.inflate(layoutInflater)
         return activity?.let {
@@ -27,11 +29,8 @@ class HobbyDialogFragment : DialogFragment() {
                             DialogInterface.OnClickListener { _, _ ->
                                 val newHobby = binding.titleUserInput.text.toString()
                                 HobbyRepository.addHobby(Hobby(newHobby))
-                                Toast.makeText(
-                                        context,
-                                        "New hobby: $newHobby",
-                                        Toast.LENGTH_SHORT
-                                ).show()
+                                onHobbyAdded()
+                                Toast.makeText(context, "Hobby Added", Toast.LENGTH_SHORT).show()
                             })
                     .setNegativeButton(R.string.cancel_text,
                             DialogInterface.OnClickListener { _, _ ->

@@ -14,15 +14,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
-            handleBottomNavigation(it.itemId, binding)
+            handleBottomNavigation(it.itemId)
         }
 
         binding.bottomNavigation.selectedItemId = R.id.menu_bio
     }
 
     private fun handleBottomNavigation(
-            menuItemId: Int,
-            binding: ActivityMainBinding
+            menuItemId: Int
     ): Boolean = when (menuItemId) {
         R.id.menu_bio -> {
             swapFragments(BioFragment())
